@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: Practic-rest-api
+    environment:
+      POSTGRES_DB: Dhruv-Practic-rest-api
+      POSTGRES_USER: Practic
+      POSTGRES_PASSWORD: Practic@123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+ 
+volumes:
+  postgres_data:
